@@ -1,0 +1,26 @@
+name: React Props Autograding
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  autograding:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Make Test Script Executable
+        run: chmod +x tests/test.sh
+
+      - name: Run Test Cases
+        run: ./tests/test.sh
