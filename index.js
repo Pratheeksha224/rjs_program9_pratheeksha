@@ -11,15 +11,11 @@ function StudentCard(props) {
   )
 }
 
-// TODO 2:
-// Create the React Root.
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
 
-// TODO 3:
-// Render three StudentCard components.
 
 root.render(
 
