@@ -1,54 +1,58 @@
-const { Card, ListGroup } = ReactBootstrap;
-
 function StudentCard(props) {
   return (
-    <div>
-      <img src={props.image} />
-      <h4>Name: {props.name}</h4>
-      <h4>Register No.: {props.regno}</h4>
-      <h4>Department: {props.dept}</h4>
+    <div className="col-md-4 mb-4">
+      <div className="card">
+        <img
+          src={props.image}
+          className="card-img-top"
+          alt={props.name}
+        />
+        <div className="card-body">
+          <h5 className="card-title"></h5>
+          <p><b>Name:</b> {props.name}</p>
+          <p><b>Reg No:</b> {props.regno}</p>
+          <p><b>Department:</b> {props.department}</p>
+          <p><b>Marks:</b> {props.marks}</p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-
+// Create the React Root.
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
 
-
+// Render three StudentCard components.
 root.render(
-
   <div className="container mt-4">
-
     <div className="row">
 
-      {/* Student 1 */}
       <StudentCard
-        image="image1.jpg"
-        name="student 1"
-        regno="iu74ba29"
-        dept="BBA"
+        image="img1.jpg"
+        name="Rahul"
+        regno="101"
+        department="BCA"
+        marks="92"
       />
 
-      {/* Student 2 */}
       <StudentCard
-        image="image2.jpg"
-        name="student 2"
-        regno="Iuca044"
-        dept="CA"
+        image="img2.jpg"
+        name="Harish"
+        regno="102"
+        department="B.Sc CS"
+        marks="88"
       />
 
-      {/* Student 3 */}
       <StudentCard
-        image="image3.jpg"
-        name="student 3"
-        regno="1ua23o77"
-        dept="IT"
+        image="img3.jpg"
+        name="kaviya"
+        regno="103"
+        department="B.Com"
+        marks="95"
       />
 
     </div>
-
   </div>
-
 );
